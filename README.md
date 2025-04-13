@@ -1,40 +1,75 @@
-# Welcome to Remix!
+# Food Identifier App
 
-- 📖 [Remix docs](https://remix.run/docs)
+A web application that enables users to upload photographs of food and receive AI-generated ingredient identification through OpenAI's GPT-4o API.
 
-## Development
+## Features
 
-Run the dev server:
+- Upload food images via a web interface
+- AI-powered food ingredient identification
+- Display of main items, ingredients, toppings, and garnishes
+- Optional nutritional and dietary information
+- Responsive design for cross-device compatibility
 
-```shellscript
-npm run dev
-```
+## Tech Stack
+
+- **Framework**: [Remix](https://remix.run)
+- **UI Library**: [Shadcn UI](https://ui.shadcn.com/) with Tailwind CSS
+- **API Integration**: OpenAI GPT-4o API
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js (v18 or higher)
+- npm or yarn
+- OpenAI API key
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/food-identifier-app.git
+   cd food-identifier-app
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Create a `.env` file based on `.env.example` and add your OpenAI API key:
+   ```
+   OPENAI_API_KEY=your_openai_api_key_here
+   ```
+
+4. Start the development server:
+   ```bash
+   npm run dev
+   ```
+
+5. Open your browser and navigate to `http://localhost:3000`
+
+## Project Structure
+
+- `app/components/ui`: Shadcn UI components
+- `app/components/custom`: Custom application components
+- `app/lib`: Utility functions
+- `app/models`: Type definitions
+- `app/routes`: Remix routes
+- `app/services`: Business logic services
+
+## Architecture
+
+The application follows a clean architecture approach with:
+- Functional programming principles
+- Service-oriented architecture
+- Plugin registry for extensibility
+- Decorator pattern for cross-cutting concerns
 
 ## Deployment
 
-First, build your app for production:
+This application can be deployed to any hosting service that supports Remix applications, such as Vercel, Netlify, or Fly.io.
 
-```sh
-npm run build
-```
+## License
 
-Then run the app in production mode:
-
-```sh
-npm start
-```
-
-Now you'll need to pick a host to deploy it to.
-
-### DIY
-
-If you're familiar with deploying Node applications, the built-in Remix app server is production-ready.
-
-Make sure to deploy the output of `npm run build`
-
-- `build/server`
-- `build/client`
-
-## Styling
-
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever css framework you prefer. See the [Vite docs on css](https://vitejs.dev/guide/features.html#css) for more information.
+MIT
