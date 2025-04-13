@@ -7,6 +7,10 @@ app = 'food-identifier-app'
 primary_region = 'dfw'
 
 [build]
+  command = "npm run build"
+
+[processes]
+  app = "node ./build/server.js"
 
 [http_service]
   internal_port = 8080
