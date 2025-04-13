@@ -8,6 +8,13 @@ primary_region = 'dfw'
 
 [build]
   command = "npm run build"
+  dockerfile = "Dockerfile"
+
+[build.args]
+  NODE_ENV = "production"
+
+[deploy]
+  release_command = "npm run build"
 
 [processes]
   app = "node ./build/server.js"
